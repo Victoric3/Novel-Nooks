@@ -5,8 +5,9 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 class HomeRepository extends BookRepository {
   HomeRepository(super.httpClient);
 
-  final popular = getpopularUrl(WidgetRef ref)
+  
   Future<BookRepositoryData> getPopularHomeFeed() {
+    final popular = getpopularUrl(WidgetRef ref);
     final successOrFailure = getCategory(popular);
     return successOrFailure;
   }
